@@ -11,3 +11,9 @@ end
 post '/' do
   "New URL added: #{params[:url]}\n"
 end
+
+LETTERS = Array('a'..'z')
+def generate_short_url
+  Array.new(6) { LETTERS.sample }.join
+end
+
