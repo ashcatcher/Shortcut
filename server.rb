@@ -1,7 +1,7 @@
 require 'sinatra'
+require 'base64'
 
 get '/:url' do
-  "The URL is #{params[:url]}"
 end
 
 get '/' do
@@ -9,11 +9,12 @@ get '/' do
 end
 
 post '/' do
+  url = generate_short_url(params[:url])
   "New URL added: #{params[:url]}\n"
 end
 
 LETTERS = Array('a'..'z')
-def generate_short_url
-  Array.new(6) { LETTERS.sample }.join
+def generate_short_url(original)
+#  Array.new(6) { LETTERS.sample }.join
+  "localhost:4567/" + Base64.encode64(original)[0..6]
 end
-

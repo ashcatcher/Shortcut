@@ -6,6 +6,9 @@ ruby '2.5.1'
 # Include Sinatra
 gem 'sinatra'
 
+# Include Shotgun for automatic reloading
+gem 'shotgun'
+
 # Include Nokogiri
 #gem 'nokogiri'
 
