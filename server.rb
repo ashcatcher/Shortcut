@@ -14,6 +14,7 @@ end
 
 get '/' do
   'Send a POST request to register a new URL.'
+  erb :url
 end
 
 post '/' do
