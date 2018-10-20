@@ -11,8 +11,21 @@ Multi-line git commit messages
 Force removal of targetted FOLDER/FILE from current directories git repo
 **FILES/FOLDERS WILL NOT BE REMOVED FROM DIRECTORY, ONLY FROM VERSION CONTROL**
 
-```ruby
-gem install shotgun
-shotgun server.rb
-```
-Installs the shotgun gem, use shotgun instead of rb to load Sinatra server files. Automated reload on port 9393.
+
+Installation:
+
+  gem install shotgun
+
+Starting a server with a rackup file:
+
+  shotgun config.ru
+
+Using Thin and starting on port 6000 instead of 9393 (default):
+
+  shotgun --server=thin --port=6000 config.ru
+
+Running Sinatra apps:
+
+  shotgun hello.rb
+
+See 'shotgun --help' for more advanced usage.,
