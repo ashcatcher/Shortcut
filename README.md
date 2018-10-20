@@ -12,13 +12,13 @@ Simple URL shortener built with Sinatra
 ## Known Issues
 
 ## TODO:
-<<<<<<< HEAD
 * [ ] Ensure unique-ness of hash (does not already exist in the database)
 * [ ] Implement a Database
   * [ ] Add a Database Adapter
   * [ ] Integration with Database Tables
 * [.] HTTP front-end
   * [ ] Form
+  * [ ] Bootstrap CSS
   * [X] Template
     * [X] Add .erb Views
   * [ ] Navigation
