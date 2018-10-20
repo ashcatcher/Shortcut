@@ -10,10 +10,16 @@ Simple URL shortener built with Sinatra
 `shotgun server.rb`
 
 ## Known Issues
-* I haven't changed the port used in server.rb
-* Not production ready
-  * It will not work without localhost being the correct port
 
 ## TODO:
-* [  ] Implement an ACTUAL database instead of a PStore object
-* [  ] Integration with additional services
+* [  ] Ensure unique-ness of hash (does not already exist in the database)
+* [  ] database adapter integration (ActiveRecord, Sequel, etc.)
+* [  ] HTTP front-end
+  * [  ] Form
+  * [  ] Template
+    * [  ] Add .erb Views
+  * [  ] Navigation
+  * [  ] Mobile Interface
+  * [  ] Account Administration Page
+* [  ] Session Cookie
+* [  ] User Accounts
