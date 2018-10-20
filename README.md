@@ -13,16 +13,19 @@ Simple URL shortener built with Sinatra
 
 ## TODO:
 <<<<<<< HEAD
-* [  ] Ensure unique-ness of hash (does not already exist in the database)
-* [  ] Implement a Database
-  * [  ] Add a Database Adapter
-  * [  ] Integration with Database Tables
-* [  ] HTTP front-end
-  * [  ] Form
-  * [  ] Template
-    * [  ] Add .erb Views
-  * [  ] Navigation
-  * [  ] Mobile Interface
-  * [  ] Account Administration Page
-* [  ] Session Cookie
-* [  ] User Accounts
+* [ ] Ensure unique-ness of hash (does not already exist in the database)
+* [ ] Implement a Database
+  * [ ] Add a Database Adapter
+  * [ ] Integration with Database Tables
+* [.] HTTP front-end
+  * [ ] Form
+  * [X] Template
+    * [X] Add .erb Views
+  * [ ] Navigation
+  * [ ] Background Image
+    * [X] Add Background Image
+    * [ ] Responsive Background Images
+  * [ ] Mobile Interface
+  * [ ] Account Administration Page
+* [ ] Session Cookie
+* [ ] User Accounts
