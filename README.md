@@ -4,28 +4,21 @@ Simple URL shortener built with Sinatra
 ## Features
 * Map POST requests to a 6 character BASE64 hash
 * Map :url parameters to shortened hash and redirect
+* Front-end ERB template
 
 ## Installation
-`bundle install`
-`shotgun server.rb`
 
+```ruby
+bundle install
+shotgun server.rb```
 ## Known Issues
+When passing a URL that includes http:// the db copy instead returns http// (breaking it)
 
 ## TODO:
 * [ ] Ensure unique-ness of hash (does not already exist in the database)
+* [ ] Implement Logs
 * [ ] Implement a Database
-  * [ ] Add a Database Adapter
-  * [ ] Integration with Database Tables
-* [.] HTTP front-end
-  * [ ] Form
-  * [ ] Bootstrap CSS
-  * [X] Template
-    * [X] Add .erb Views
-  * [ ] Navigation
-  * [ ] Background Image
-    * [X] Add Background Image
-    * [ ] Responsive Background Images
-  * [ ] Mobile Interface
-  * [ ] Account Administration Page
+* [ ] Responsive Design
+* [ ] Front-End improvements
+* [ ] Switch to live-view of short URL's in lieu of redirect
 * [ ] Session Cookie
-* [ ] User Accounts
