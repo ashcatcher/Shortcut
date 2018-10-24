@@ -10,7 +10,7 @@ gem 'sinatra'
 gem 'shotgun'
 
 # Include Nokogiri
-#gem 'nokogiri'
+gem 'nokogiri'
 
 # Include specified version of gem
 # gem 'nokogiri', '3.1.1'

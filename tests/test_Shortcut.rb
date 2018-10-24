@@ -2,6 +2,7 @@ ENV['RACK_ENV'] = 'test'
 require "./Shortcut.rb"
 require "test/unit"
 require 'rack/test'
+require 'nokogiri'
 
 class TestShortcut < Test::Unit::TestCase
 
