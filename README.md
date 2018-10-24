@@ -10,7 +10,7 @@ URL shortener built with Sinatra
 
 ```ruby
 bundle install
-shotgun server.rb```
+
 ## Known Issues
 When passing a URL that includes http:// the db copy instead returns http// (breaking it)
 
