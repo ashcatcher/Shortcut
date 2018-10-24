@@ -14,7 +14,7 @@ end
 
 get '/' do
   'Send a POST request to register a new URL.'
-  erb :url
+  erb :shotcut
 end
 
 post '/' do
