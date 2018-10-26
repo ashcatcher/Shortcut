@@ -2,9 +2,9 @@
 URL shortener built with Sinatra
 
 ## Features
-* Host a (TODO: fancier) fancy web page
-* Shorten URL
-* 
+* Shorten URL's
+* Look sexy doing it
+
 
 ## Installation
 
