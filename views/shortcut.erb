@@ -11,19 +11,34 @@
     <title>Shortcut</title>
 
     <style>
-body {background: #73CCD3;}
-#center-head {
-  text-align: center;
-  color: #414141;
-  font-size: 96px;
-  font-family: Avenir-Black;
-  margin-top: 150px;
-  }
+      body {background: #73CCD3;}
+      #center-head {
+        text-align: center;
+        color: #414141;
+        font-size: 96px;
+        font-family: Avenir-Black;
+        margin-top: 150px;
+}
+      .urlframe {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        display: block;
+        margin: auto;
+}
+      .frame-outer {
+
+      }
     </style>
 
   </head>
   <body>
     <div class="container">
+      <!-- Scales outside dimensions of the graphic to fit within the container -->
+      <svg class="urlframe frame-outer" width="100%" height="100%">
+        <polygon points="0,298 1110,298 1110,387 0,477" style="fill:black" />
+      </svg>
+
       <h1 class="pt-5" id="center-head">Shortcut!</h1>
 
       <form method="post">
@@ -40,7 +55,8 @@ body {background: #73CCD3;}
           </div>
         </div>
       </form>
-      <div class="row">
+      <!--
+        <div class="row">
         <div class="col-3">
         </div>
         <div class="col-6">
@@ -51,12 +67,15 @@ body {background: #73CCD3;}
           <div class="row">
             <button id="hgetw" class="btn btn-warning">Get Window Height</button>
             <button id="wgetw" class="btn btn-danger">Get Window Width</button>
+            <button id="columngetw" class="btn btn-default">Get Column Width</button>
+            <button id="containergetw" class="btn btn-primary">Get Container Width</button
           </div>
         </div>
         <div class="col-3">
           <p id="infobox">&nbsp;</p>
         </div>
       </div>
+      -->
     </div>
 
 
@@ -87,6 +106,12 @@ body {background: #73CCD3;}
       });
       $("#wgetw").click(function() {
         showWidth("window", $(window).width() );
+      });
+      $("#columngetw").click(function() {
+        showWidth("column", $(".col-6").width() );
+      });
+      $("#containergetw").click(function() {
+        showWidth("container", $(".container").width() );
       });
     </script>
   </body>
