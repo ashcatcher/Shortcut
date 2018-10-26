@@ -2,9 +2,9 @@
 URL shortener built with Sinatra
 
 ## Features
-* Map POST requests to a 6 character BASE64 hash
-* Map :url parameters to shortened hash and redirect
-* Front-end ERB template
+* Host a (TODO: fancier) fancy web page
+* Shorten URL
+* 
 
 ## Installation
 
@@ -17,5 +17,5 @@ When passing a URL that includes http:// the db copy instead returns http// (bre
 ## TODO:
 * [ ] Database upgrade.
 * [ ] Responsive Design
-* [ ] Eliminate redirect
+* [ ] Single Page
 * [ ] Remember me
