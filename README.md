@@ -15,10 +15,7 @@ bundle install
 When passing a URL that includes http:// the db copy instead returns http// (breaking it)
 
 ## TODO:
-* [ ] Ensure unique-ness of hash (does not already exist in the database)
-* [ ] Implement Logs
-* [ ] Implement a Database
+* [ ] Database upgrade.
 * [ ] Responsive Design
-* [ ] Front-End improvements
-* [ ] Switch to live-view of short URL's in lieu of redirect
-* [ ] Session Cookie
+* [ ] Eliminate redirect
+* [ ] Remember me
