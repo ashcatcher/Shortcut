@@ -2,23 +2,20 @@
 URL shortener built with Sinatra
 
 ## Features
-* Map POST requests to a 6 character BASE64 hash
-* Map :url parameters to shortened hash and redirect
-* Front-end ERB template
+* Shorten URL's
+* Look sexy doing it
 
 ## Installation
 
 ```ruby
 bundle install
+```
 
 ## Known Issues
 When passing a URL that includes http:// the db copy instead returns http// (breaking it)
 
 ## TODO:
-* [ ] Ensure unique-ness of hash (does not already exist in the database)
-* [ ] Implement Logs
-* [ ] Implement a Database
+* [ ] Database upgrade.
 * [ ] Responsive Design
-* [ ] Front-End improvements
-* [ ] Switch to live-view of short URL's in lieu of redirect
-* [ ] Session Cookie
+* [ ] Single Page
+* [ ] Remember me
