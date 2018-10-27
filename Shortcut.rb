@@ -8,6 +8,12 @@ get '/' do
   erb :shortcut
 end
 
+get '/debug' do
+  @title = 'Shortcut|Debug'
+  @debug = true
+  erb :shortcut
+end
+
 get '/:url' do
   original = ShortURL.read(params[:url])
 

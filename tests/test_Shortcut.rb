@@ -10,7 +10,7 @@ class TestShortcut < Test::Unit::TestCase
   end
 end
 
-class ShortcutTest < Test::Unit::TestCase
+class HomePageTest < Test::Unit::TestCase
   include Rack::Test::Methods
   def app() Sinatra::Application end
 
@@ -25,5 +25,9 @@ class ShortcutTest < Test::Unit::TestCase
     assert (page.title == 'Shortcut')
   end
 
-
+  def test_debug_not_present
+    response = get '/'
+    page = Nokogiri::HTML(response.body)
+    assert_nil page.at_css("#infobox")
+  end
 end
