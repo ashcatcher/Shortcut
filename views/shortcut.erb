@@ -1,23 +1,27 @@
-    <div class="container">
-      <!-- Scales outside dimensions of the graphic to fit within the container -->
-      <svg class="urlframe frame-outer" width="100%" height="100%">
-        <polygon points="0,298 1110,298 1110,387 0,477" style="fill:black" />
-      </svg>
+<div class="container">
+  <!-- Scales outside dimensions of the graphic to fit within the container -->
+  <svg class="urlframe frame-outer" width="100%" height="100%">
+    <polygon points="0,298 1110,298 1110,387 0,477" style="fill:black" />
+  </svg>
 
-      <h1 class="pt-5" id="center-head">Shortcut!</h1>
+  <row>
+  <h1 class="pt-5" id="center-head">Shortcut!</h1>
+  </row>
 
-      <form method="post">
-        <div class="form-row">
-          <div class="col-3">
+  <form method="post">
+    <div class="form-row">
+      <div class="col-3">
 
-          </div>
-          <div class="form-group col-6">
-            <input type="text" name="url" class="form-control" id="longInputURL" aria-describedby="shortcutHelp" placeholder="Where do you want to go?">
-            <small id="shortcutHelp" class="form-text text-muted">The World is a big place, and it's easy to get lost. Tell us where you've been, and we'll help you find your way back.</small>
-          </div>
-          <div class="col-3">
-            <button type="submit" class="btn btm-primary">Shortcut!</button>
-          </div>
-        </div>
-      </form>
+      </div>
+      <div class="form-group col-6">
+        <input type="text" name="url" class="form-control" id="InputURL" placeholder="Where do you want to go?">
+        <small class="form-text text-muted">Don't go alone, take this!</small>
+      </div>
+      <div class="col-3">
+        <button onclick="postURL()" class="btn btn-primary">Shorten</button>
+      </div>
     </div>
+  </form>
+  <div style="margin-top: 100px;" id="tinyURL">
+  </div>
+</div>

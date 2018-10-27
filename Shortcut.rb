@@ -1,6 +1,4 @@
-require 'sinatra'
-require 'base64'
-require 'pstore'
+%w[sinatra base64 pstore].each{ |gem| require gem }
 
 get '/' do
   @title = 'Shortcut'
