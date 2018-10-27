@@ -15,7 +15,5 @@ bundle install
 When passing a URL that includes http:// the db copy instead returns http// (breaking it)
 
 ## TODO:
-* [ ] Database upgrade.
 * [ ] Responsive Design
 * [ ] Single Page
-* [ ] Remember me
