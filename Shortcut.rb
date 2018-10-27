@@ -2,6 +2,11 @@ require 'sinatra'
 require 'base64'
 require 'pstore'
 
+get '/' do
+  @title = 'Shortcut'
+  erb :shortcut
+end
+
 get '/:url' do
   original = ShortURL.read(params[:url])
 
@@ -10,11 +15,6 @@ get '/:url' do
   else
     "Sorry, URL not found."
   end
-end
-
-get '/' do
-  @title = 'Shortcut'
-  erb :shortcut
 end
 
 post '/' do
