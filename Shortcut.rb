@@ -13,7 +13,7 @@ get '/:url' do
 end
 
 get '/' do
-  'Send a POST request to register a new URL.'
+  @title = 'Shortcut'
   erb :shortcut
 end
 
