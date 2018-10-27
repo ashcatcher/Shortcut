@@ -4,6 +4,7 @@ require 'pstore'
 
 get '/' do
   @title = 'Shortcut'
+  @debug = false 
   erb :shortcut
 end
 
