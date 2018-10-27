@@ -1,0 +1,48 @@
+         <div class="row">
+         <div class="col-3">
+         </div>
+         <div class="col-6">
+           <div class="row">
+             <button id="hgetd" class="btn btn-warning">Get Document Height</button>
+             <button id="wgetd" class="btn btn-danger">Get Document Width</button>
+           </div>
+           <div class="row">
+             <button id="hgetw" class="btn btn-warning">Get Window Height</button>
+             <button id="wgetw" class="btn btn-danger">Get Window Width</button>
+             <button id="columngetw" class="btn btn-default">Get Column Width</button>
+             <button id="containergetw" class="btn btn-primary">Get Container Width</button
+           </div>
+         </div>
+         <div class="col-3">
+           <p id="infobox">&nbsp;</p>
+         </div>
+       </div>
+            <script>
+       function showHeight(element, height) {
+         $("#infobox").text("The height for the " + element + " is " + height + "px." );
+       }
+       $("#hgetd").click(function() {
+         showHeight("document", $(document).height() );
+       });
+       $("#hgetw").click(function() {
+         showHeight("window", $(window).height() );
+       });
+     </script>
+
+     <script>
+       function showWidth(element, width) {
+         $("#infobox").text("The width for the " + element + " is " + width +"px." );
+       }
+       $("#wgetd").click(function() {
+         showWidth("document", $(document).width() );
+       });
+       $("#wgetw").click(function() {
+         showWidth("window", $(window).width() );
+       });
+       $("#columngetw").click(function() {
+         showWidth("column", $(".col-6").width() );
+       });
+       $("#containergetw").click(function() {
+         showWidth("container", $(".container").width() );
+       });
+     </script>
