@@ -15,17 +15,15 @@ get '/:url' do
   original = ShortURL.read(params[:url])
 
   if original
-    redirect 'http://' + ShortURL.read(params[:url])
+    redirect to(original)
   else
     "Sorry, URL not found."
   end
 end
 
 post '/' do
-  url = generate_short_url(params[:url])
-
-  "New URL added: #{params[:url]}"\
-    "\nYour shortened URL is #{url}\n"
+ url = generate_short_url(params[:url])
+ "#{url}"
 end
 
 LETTERS = Array('a'..'z')
@@ -35,7 +33,7 @@ def generate_short_url(original)
 
   # Array.new(6) { LETTERS.sample }.join #Alternative Hashing Method
 
-  'localhost:4567/' + Base64.encode64(original)[0..6]
+  'localhost:9393/' + Base64.encode64(original)[0..6]
 end
 
 # logic behind persistence of shortened URL's
