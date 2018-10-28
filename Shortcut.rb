@@ -14,8 +14,10 @@ end
 get '/:url' do
   original = ShortURL.read(params[:url])
 
-  if original
+  if original.match(/http/) 
     redirect to(original)
+  elsif original
+    redirect 'http://' + original
   else
     "Sorry, URL not found."
   end
@@ -23,7 +25,6 @@ end
 
 post '/' do
  url = generate_short_url(params[:url])
- "#{url}"
 end
 
 LETTERS = Array('a'..'z')
