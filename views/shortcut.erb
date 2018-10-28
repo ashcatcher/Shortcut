@@ -8,7 +8,7 @@
   <h1 class="pt-5" id="center-head">Shortcut!</h1>
   </row>
 
-  <form method="post">
+  <form id="tinyURLForm">
     <div class="form-row">
       <div class="col-3">
 
@@ -18,10 +18,11 @@
         <small class="form-text text-muted">Don't go alone, take this!</small>
       </div>
       <div class="col-3">
-        <button onclick="postURL()" class="btn btn-primary">Shorten</button>
+        <button type="submit" id="postButton" class="btn btn-primary">Shorten</button>
       </div>
     </div>
   </form>
-  <div style="margin-top: 100px;" id="tinyURL">
+  <div style="margin-top: 100px;">
+    <p id="tinyURL">&nbsp</p>
   </div>
 </div>
