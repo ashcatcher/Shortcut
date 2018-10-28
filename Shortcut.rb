@@ -1,5 +1,4 @@
 %w[sinatra base64 pstore].each{ |gem| require gem }
-
 get '/' do
   @title = 'Shortcut'
   @debug = false 

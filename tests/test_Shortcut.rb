@@ -4,6 +4,10 @@ require 'test/unit'
 require 'rack/test'
 require 'nokogiri'
 
+class Test::Unit::TestCase
+  include Rack::Test::Methods
+end
+
 class TestShortcut < Test::Unit::TestCase
   def test_sample
     assert_equal(4, 2 + 2)
@@ -11,7 +15,6 @@ class TestShortcut < Test::Unit::TestCase
 end
 
 class HomePageTest < Test::Unit::TestCase
-  include Rack::Test::Methods
   def app() Sinatra::Application end
 
   def test_homepage_loads
