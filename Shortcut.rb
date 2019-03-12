@@ -1,25 +1,20 @@
 # frozen_string_literal: true
 
 %w[sinatra base64 pstore].each { |gem| require gem }
+
+
 get '/' do
   @title = 'Shortcut'
-  @debug = false
-  erb :shortcut
-end
-
-get '/debug' do
-  @title = 'Shortcut|Debug'
-  @debug = true
   erb :shortcut
 end
 
 get '/:url' do
-  original = ShortURL.read(params[:url])
+  url = ShortURL.read(params[:url])
 
-  if original.match?(/http/)
-    redirect to(original)
-  elsif original
-    redirect 'http://' + original
+  if url.match?(/http/)
+    redirect to(url)
+  elsif url
+    redirect 'http://' + url
   else
     'Sorry, URL not found.'
   end
@@ -30,18 +25,20 @@ post '/' do
 end
 
 LETTERS = Array('a'..'z')
-def generate_short_url(original)
-  ShortURL.save(Base64.encode64(original)[0..6], original)
+def generate_short_url(url)
+  @name ||= request.env['SERVER_NAME']
+  @port ||= request.env['SERVER_PORT']
+  ShortURL.save(Base64.encode64(url)[0..6], url)
 
   # Array.new(6) { LETTERS.sample }.join #Alternative Hashing Method
 
-  'localhost:9393/' + Base64.encode64(original)[0..6]
+  "#{@name}:#{@port}/" + Base64.encode64(url)[0..6]
 end
 
 # logic behind persistence of shortened URL's
 class ShortURL
-  def self.save(encoded, original)
-    store.transaction { store[encoded] = original }
+  def self.save(encoded, url)
+    store.transaction { store[encoded] = url }
   end
 
   def self.read(encoded)
