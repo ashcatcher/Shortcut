@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.0'
 
-gem 'rack', '>= 2.0.6'
+gem 'rack', '>= 2.1.4'
 gem 'sinatra'
 
 group :development do
@@ -17,7 +17,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'nokogiri'
+  gem 'nokogiri', '>= 1.10.8'
 end
 
 group :production do
